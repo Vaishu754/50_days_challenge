@@ -1,6 +1,7 @@
 # 50_days_challenge
 
-Day 4: Data Cleaning (Handling Inconsistent Text)
+Day 4:
+Data Cleaning (Handling Inconsistent Text)
 Objective
 Clean the dataset by fixing inconsistent text values across columns.
 Tasks Completed
