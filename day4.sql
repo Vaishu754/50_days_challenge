@@ -86,7 +86,7 @@ UPDATE cleaned_employees
 SET CITY =CONCAT(UPPER(LEFT(TRIM(CITY),1))),
 LOWER(substring(trim(city),2))
 
-performance
+
 UPDATE cleaned_employees
 SET city = CASE
 
@@ -98,11 +98,34 @@ when city in ('Banglore') then 'Bengaluru'
 
 else city
 end;
-
+-----Performance----
 SELECT distinct rating_2023
 from cleaned_performance
 
+UPDATE performance
+SET rating_2022 = CASE
+    WHEN rating_2022 IS NULL THEN 0
+    ELSE rating_2022
+END,
 
+rating_2023 = CASE
+    WHEN rating_2023 IS NULL THEN 0
+    ELSE rating_2023
+END,
+
+rating_2024 = CASE
+    WHEN rating_2024 IS NULL THEN 0
+    ELSE rating_2024
+END;
+
+-----salaries----
+UPDATE salaries
+SET salary = CASE
+
+WHEN salary < 0 THEN ABS(salary)
+
+ELSE salary
+END;
 
 
 
