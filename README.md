@@ -1,17 +1,16 @@
 # 50_days_challenge
-Day 5: Data Cleaning (Handling Invalid Values)
+Day 6: Data Cleaning (Outlier Detection & Handling)
 Objective
-Identify and fix logically incorrect or invalid values in the dataset.
+Identify and handle extreme values (outliers) in the dataset.
 Tasks Completed
-Detected invalid values (negative salary, invalid age, incorrect ratings)
-Applied business rules to define valid ranges
-Replaced incorrect values using client-provided data
-Used CASE WHEN and JOIN-based updates for corrections
-Ensured no assumption-based fixes were applied
+Detected outliers using business thresholds (e.g., salary range)
+Flagged outliers using a new column (is_outlier)
+Differentiated between valid and invalid outliers
+Replaced incorrect outliers using client-provided data
+Preserved valid extreme values (e.g., CEO salary)
 Key Learning
-Invalid values are not always missing but logically incorrect
-Data should be corrected using trusted sources (client/system)
-Never blindly manipulate values without business context
+Not all outliers are errors — some are meaningful
+Outliers should be analyzed, not blindly removed
+Business understanding is essential in decision-making
 Outcome
-Dataset now contains only valid and reliable values, improving data accuracy.
-
+Outliers are properly identified and handled, ensuring both accuracy and meaningful insights.
